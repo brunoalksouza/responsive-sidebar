@@ -1,13 +1,8 @@
+document.querySelector("#abrir-sidebar").addEventListener("click", abrirFechar);
 
-let abrir = true;
+const container = document.querySelector(".container");
 
-document.querySelector('#abrir-sidebar').addEventListener('click', abrirFechar)
 function abrirFechar() {
-  if(abrir) {
-    document.querySelector('.container').style.display = 'none';
-    abrir = false;
-  } else {
-    document.querySelector('.container').style.display = 'flex';
-    abrir = true;
-  }
+  container.classList.toggle("openContainer");
 }
+
